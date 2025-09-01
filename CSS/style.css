@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background: #535050;
+}
+
+#btn {
+    display: none;
+}
+
+#btn:checked+.menu-btn {
+    display: none;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #404040;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu-btn i {
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.side-bar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: #404040;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#btn:checked~.side-bar {
+    left: 0;
+}
+
+.side-bar .title {
+    line-height: 65px;
+    text-align: center;
+    background: #333;
+    font-size: 25px;
+    font-weight: 600;
+    border-bottom: 1px solid #222;
+    position: relative;
+}
+
+.side-bar .title label {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.side-bar .menu ul {
+    list-style: none;
+    flex: 1;
+}
+
+.side-bar .menu ul li {
+    padding-left: 40px;
+    line-height: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.side-bar .menu ul li:hover {
+    background: #555;
+}
+
+.side-bar .menu ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.side-bar .social {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.side-bar .social a {
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.side-bar .social a:hover {
+    color: #f86d8d;
+}
